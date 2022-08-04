@@ -52,5 +52,7 @@ void *malloc(int size)
 
 void free(void *ptr)
 {
-	/* Nothing yet */
+	if(ptr >= memory && ptr < memory + MEMSIZE) {
+		memptr = ptr;
+	}
 }
